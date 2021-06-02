@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --titleColor: #0a2540;
+  --textColor: #425466;
+  --backgorundColor: #f6f9fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: var(--textColor);
+  /* background-color: var(--backgorundColor); */
+}
+
+main {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Buttons */
+.btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--titleColor);
+  padding: 0.75rem 1.25rem;
+  text-transform: capitalize;
+}
+
+/* Select container */
+.select {
+  position: relative;
+}
+
+.btn::after,
+.btn::before,
+.select::after,
+.select::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+
+.btn::after,
+.select::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: var(--titleColor);
+  border-right-color: var(--titleColor);
+}
+
+.btn::before,
+.select::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: var(--titleColor);
+  border-left-color: var(--titleColor);
+}
+
+.btn:hover:after,
+.btn:hover:before {
+  width: 100%;
+  height: 100%;
+}
+
+/* Select */
+select {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--titleColor);
+}
+
+/* option {
+    padding: 0.75rem 0;
+  } */
+
+/* Courses */
+.courses-section {
+  padding: 3rem 0 0;
+}
+
+.btn-course {
+  margin-right: 25px;
+}
+
+.btn-course.active {
+  background-color: var(--titleColor);
+  color: #fff;
+}
+
+.btn-course.active:after,
+.btn-course.active:before {
+  width: 100%;
+  height: 100%;
+}
+
+.selected-course {
+  margin: 25px 0 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Table */
+.section-table {
+  padding: 3rem 0;
+}
+
+.container-table {
+  overflow-x: scroll;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+}
+
+.content-table {
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+.content-table thead tr {
+  background-color: var(--titleColor);
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table tbody tr {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.content-table tbody tr:hover {
+  background-color: #d8d8d8 !important;
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-table th,
+.content-table td {
+  padding: 7px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--titleColor);
+}
+
+/* Student row */
+.student-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* The Modal  */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 1.75rem 1rem;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.title-modal {
+  display: flex;
+  align-items: center;
+  background-color: var(--titleColor);
+  color: #fff;
+  padding: 5px 15px;
+}
+
+.modal-body {
+  padding: 15px 25px;
+}
+
+input,
+input:focus {
+  border: none;
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.35rem 0.75rem;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-bottom: 1px solid #ced4da;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
+.radio-group input {
+  margin-right: 5px;
+}
+
+.form-control:focus {
+  border-bottom: 1px solid var(--titleColor);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Toast */
+.toast-controller {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #000;
+  min-width: 150px;
+  color: #fff;
+  display: none;
+  z-index: 23423423423;
+}
+
+.toast-controller.success {
+  background-color: #30b830;
+  border: 1px solid #185318
+}
+
+.toast-controller.error {
+  background-color: #ee6f6f;
+  border: 1px solid #531818
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .container-table {
+    overflow-x: hidden;
+  }
+
+  .modal-content {
+    margin: 1.75rem auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .btn,
+  select {
+    padding: 1rem 1.5rem;
+  }
+
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}

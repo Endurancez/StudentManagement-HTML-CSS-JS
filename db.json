@@ -1,0 +1,130 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "history",
+      "assignedTeacher": "Victoria Cobbett",
+      "studentList": [
+        {
+          "id": 2,
+          "firstName": "Martin2",
+          "lastName": "Lawrence2",
+          "gender": "M",
+          "address": "",
+          "hobbies": "",
+          "historyGrade": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "english",
+      "assignedTeacher": "Victoria Cobbett",
+      "studentList": []
+    },
+    {
+      "id": 3,
+      "name": "Math",
+      "assignedTeacher": "Andu",
+      "studentList": [
+        {
+          "id": 7,
+          "firstName": "Simona",
+          "lastName": "Anca",
+          "gender": "F",
+          "address": "",
+          "hobbies": "",
+          "MathGrade": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "test",
+      "assignedTeacher": "test",
+      "studentList": []
+    },
+    {
+      "id": 5,
+      "name": "Test5",
+      "assignedTeacher": "Redge",
+      "studentList": []
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "firstName": "Martin3",
+      "lastName": "Lawrence3",
+      "gender": "M"
+    },
+    {
+      "id": 2,
+      "firstName": "Martin2",
+      "lastName": "Lawrence2",
+      "gender": "M"
+    },
+    {
+      "id": 3,
+      "firstName": "Martin10",
+      "lastName": "Lawrence10",
+      "gender": "M"
+    },
+    {
+      "id": 4,
+      "firstName": "Andu",
+      "lastName": "Vilcea",
+      "gender": "M",
+      "address": "",
+      "hobbies": ""
+    },
+    {
+      "id": 7777,
+      "firstName": "Adriana",
+      "lastName": "Stefania",
+      "gender": "F",
+      "address": "",
+      "hobbies": ""
+    },
+    {
+      "id": 6,
+      "firstName": "Mihai",
+      "lastName": "Dumitru",
+      "gender": "M",
+      "address": "",
+      "hobbies": ""
+    },
+    {
+      "id": 7,
+      "firstName": "Simona",
+      "lastName": "Anca",
+      "gender": "F",
+      "address": "",
+      "hobbies": ""
+    },
+    {
+      "id": 8,
+      "firstName": "Alex",
+      "lastName": "Vilcea",
+      "gender": "M",
+      "address": "",
+      "hobbies": ""
+    },
+    {
+      "id": 9,
+      "firstName": "Andrei",
+      "lastName": "Alex",
+      "gender": "M",
+      "address": "",
+      "hobbies": ""
+    },
+    {
+      "id": 10,
+      "firstName": "Andu",
+      "lastName": "7 cai",
+      "gender": "M",
+      "address": "245",
+      "hobbies": ""
+    }
+  ]
+}
